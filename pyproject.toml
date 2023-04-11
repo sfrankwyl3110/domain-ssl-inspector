@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "domain-ssl-inspector"
+version = "0.1"
+description = "A simple and practical SSL Inspector"
+authors = ["Izzy3110 <sfrank@wyl-online.de>"]
+repository = "https://github.com/sfrankwyl3110/domain-ssl-inspector"
+homepage = "https://github.com/sfrankwyl3110"
+
+[tool.poetry.dependencies]
+python = "^3.11.1"
+python-dotenv = "^1.0.0"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^6.0.0"
+
+[build-system]
+requires = ["poetry-core>=1.5.2"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+multi_line_output = 3
+force_grid_wrap = 0
+line_length = 120
+use_parentheses = true
+include_trailing_comma = true
+
+[tool.black]
+line_length = 120
+
+[tool.mypy]
+files = ["ssl_inspect.py"]
+ignore_missing_imports=true
+
+[tool.pytest]
+testpaths=["tests"]
